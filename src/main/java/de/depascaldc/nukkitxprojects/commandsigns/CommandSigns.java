@@ -46,12 +46,14 @@ public class CommandSigns extends PluginBase implements Listener {
                         line3 = signtext[2];
                         line4 = signtext[3];
                         if (line1.equals("[CMD]") && p.isOp()) {
-                            bes.setText(new String[]{"§a§c§e§c§b§r[§a§c§e§c§bCommand§r]", "§a" + line2, "§a" + line3, "§a" + line4});
+                            bes.setText("§a§c§e§c§b§r[§a§c§e§c§bCommand§r]", "§a" + line2, "§a" + line3, "§a" + line4);
                         }
 
+                        line3 = line3.replaceAll("§a", "").replace("@p", "\"" + p.getName() + "\"");
+                        line4 = line4.replaceAll("§a", "").replace("@p", "\"" + p.getName() + "\"");
                         if (line1.equals("§a§c§e§c§b§r[§a§c§e§c§bCommand§r]")) {
-                            if(!line3.isEmpty()) p.getServer().dispatchCommand(p, line3.replaceAll("§a", "").replace("@p", "\"" + p.getName() + "\""));
-                            if(!line4.isEmpty()) p.getServer().dispatchCommand(p, line4.replaceAll("§a", "").replace("@p", "\"" + p.getName() + "\""));
+                            if(!line3.isEmpty()) p.getServer().dispatchCommand(p, line3);
+                            if(!line4.isEmpty()) p.getServer().dispatchCommand(p, line4);
                             e.setCancelled(true);
                         }
                     }
