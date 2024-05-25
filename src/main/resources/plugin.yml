@@ -1,0 +1,14 @@
+##################################################################################################
+# ############################ BY: NukkitX-Projects - depascaldc ############################### #
+# ############################################################################################## #
+# ############ Copyright (C) 2019 | depascaldc - Management | All Rights Reserved ############## #
+# ################# WEBSITE: https://github.com/depascaldc/NukkitX-Projects##################### #
+##################################################################################################
+
+name: CommandSigns
+main: de.depascaldc.nukkitxprojects.commandsigns.CommandSigns
+version: "1.0.0"
+api: ["1.0.8"]
+author: depascaldc
+description: Create Simple CommandSigns
+website: https://github.com/depascaldc/NukkitX-Projects
